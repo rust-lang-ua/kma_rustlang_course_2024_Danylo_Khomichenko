@@ -1,8 +1,10 @@
 use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
+use serde_yaml::to_string as to_yaml;
 use std::fs::File;
 use std::io::Read;
 use std::time::Duration;
+use toml::to_string as to_toml;
 use url::Url;
 use uuid::Uuid;
 
@@ -70,5 +72,12 @@ fn main() {
     let request: Request = serde_json::from_str(&json_str).unwrap();
 
     println!("Request: {:?}", request);
+
+    let yaml_str = to_yaml(&request).unwrap();
+    println!("YAML:\n{}", yaml_str);
+
+    let toml_str = to_toml(&request).unwrap();
+    println!("TOML:\n{}", toml_str);
+
 }
 
