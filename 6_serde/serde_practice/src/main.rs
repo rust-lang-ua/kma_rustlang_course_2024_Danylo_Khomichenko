@@ -1,3 +1,5 @@
+mod test;
+
 use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
 use serde_yaml::to_string as to_yaml;

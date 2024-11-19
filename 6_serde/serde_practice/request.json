@@ -7,7 +7,7 @@
     "shard_url": "https://n3.example.com/sapi",
     "public_tariff": {
       "id": 1,
-      "price": 100,
+      "price": 110,
       "duration": "1h",
       "description": "test public tariff"
     },
